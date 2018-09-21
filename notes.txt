@@ -1,0 +1,20 @@
+netflix rating plugin
+
+document.getElementsByClassName("scrubber-head")[0];
+
+.getAttribute("aria-valuemax");
+
+function checkFlag() {
+
+    if(document.getElementsByClassName("scrubber-head")[0].getAttribute("aria-valuenow")/document.getElementsByClassName("scrubber-head")[0].getAttribute("aria-valuemax") < .9) {
+
+       window.setTimeout(checkFlag, 1000); /* this checks the flag every 1000 milliseconds*/
+    
+    } else {
+      
+	alert("hello!");
+    
+    }
+
+}
+checkFlag();

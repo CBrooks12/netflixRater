@@ -1,0 +1,23 @@
+  {
+    "name": "Getting Started Example",
+    "version": "1.0",
+    "description": "Build an Extension!",
+    "permissions": ["storage","webNavigation"],
+	"background": {
+       "scripts": [
+         "background.js"
+        ],
+        "persistent": false
+    },
+	"content_scripts": [
+      {
+        "matches": ["*://netflix.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+	"web_accessible_resources": [
+       "up.png",
+	   "down.png"
+   ],
+    "manifest_version": 2
+  }
